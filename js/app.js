@@ -15,7 +15,7 @@ const showProducts = (products) => {
     const div = document.createElement("div");
 
 
-    div.innerHTML = `<div class="single-product mx-2 rounded" style="height: 34rem; background-color:#F9E3E6;" >
+    div.innerHTML = `<div class="single-product mx-2 mb-5 rounded" style="height: 34rem; background-color:#F9E3E6;" >
     <div>
   <img class="product-image" src=${image}></img>
     </div>
