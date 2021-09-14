@@ -15,17 +15,17 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     // div.classList.add("product");
 
-    div.innerHTML = `<div class="single-product mx-2 rounded" style="height: 36rem; background-color:#F9E3E6;" >
+    div.innerHTML = `<div class="single-product mx-2 rounded" style="height: 34rem; background-color:#F9E3E6;" >
     <div>
   <img class="product-image" src=${image}></img>
     </div>
-    <h3>${product.title}</h3>
+    <h4>${product.title}</h4>
     <p>Category: ${product.category}</p>
     <h5>Rating:<span class="text-danger"> ${product.rating.rate} </span></h5>
-    <h5>Reviewed By <span class="text-danger">${product.rating.count}</span>  People</h5>
+    <h6>Reviewed By <span class="text-danger">${product.rating.count}</span>  People</h6>
     <h2>Price: $ ${product.price}</h2>
-    <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary ">Add to Cart</button>
-    <button id="details-btn" class="btn btn-danger">Details</button></div>
+    <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-primary  mx-2">Add to Cart</button>
+    <button id="details-btn" class="btn btn-danger mx-2">Details</button></div>
     `;
     document.getElementById("all-products").appendChild(div);
 
