@@ -13,7 +13,7 @@ const showProducts = (products) => {
   for (const product of allProducts) {
     const image = product.image;
     const div = document.createElement("div");
-    // div.classList.add("product");
+
 
     div.innerHTML = `<div class="single-product mx-2 rounded" style="height: 34rem; background-color:#F9E3E6;" >
     <div>
@@ -41,6 +41,8 @@ const addToCart = (id, price) => {
   updateTotal();
 };
 
+
+//set input value of a particular id upto 2 decimal point
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   let converted = parseFloat(element);
@@ -60,6 +62,8 @@ const updatePrice = (id, value) => {
 
 // set innerText function
 const setInnerText = (id, value) => {
+
+  //for delivery charge no fractional value is used
   if (id === "delivery-charge") {
     document.getElementById(id).innerText = (value);
   }
@@ -90,7 +94,7 @@ const updateTaxAndCharge = () => {
 const updateTotal = () => {
   let grandTotal = getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
-  // grandTotal = grandTotal.toFixed(2);
+  // making the total upto 2 decimal point
   document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
 
